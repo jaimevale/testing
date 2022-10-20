@@ -27,6 +27,9 @@ public class PasswordChecker {
             if (similarIndices == oldPasswords[i].length()) {
                 similar[i] = "YES";
             }
+ ///// si tu codigo es mucho más simple que el mio. realmente no te complicaste con la generación de las combinaciones de letras.
+ ////// tienes toda la razon. No se necesitaba construir las combinaciones sino probar con las dos posibilidaes de cada letra.
+ ////// feli: muy bien. Felicitaciones.
         }
         return similar;
     }
@@ -36,6 +39,7 @@ public class PasswordChecker {
         if (c < 'a' || c > 'z')
             return character;
         char nextC = (char) ((c - 'a' + 1) % 26 + 'a');
+   ////jev: muy lindo. Yo intente escribir esto mismo y finalmente fui menos prolijo y simplemente considere solo el caso del z. Excelente.
         return isLower ? nextC : Character.toUpperCase(nextC);
     }
 }
